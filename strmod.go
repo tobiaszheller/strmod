@@ -14,7 +14,7 @@ func Modify(in string, mods ...Modifier) string {
 
 type Modifier func(string) string
 
-func SplitAndReturnLast(sep string) Modifier {
+func SplitAndReturnLastPart(sep string) Modifier {
 	return func(in string) string {
 		if sep == "" && in == "" {
 			return ""
@@ -24,7 +24,7 @@ func SplitAndReturnLast(sep string) Modifier {
 	}
 }
 
-func SplitAndReturnFirst(sep string) Modifier {
+func SplitAndReturnFirstPart(sep string) Modifier {
 	return func(in string) string {
 		if sep == "" && in == "" {
 			return ""

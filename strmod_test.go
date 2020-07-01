@@ -34,67 +34,67 @@ func TestModify(t *testing.T) {
 			),
 		},
 		{
-			desc: "SplitAndReturnLast - return last",
+			desc: "SplitAndReturnLastPart - return last",
 			in:   "first/middle/last",
 			out:  "last",
 			modifiers: modifiers(
-				strmod.SplitAndReturnLast("/"),
+				strmod.SplitAndReturnLastPart("/"),
 			),
 		},
 		{
-			desc: "SplitAndReturnLast - unchanged for no matches",
+			desc: "SplitAndReturnLastPart - unchanged for no matches",
 			in:   "first/middle/last",
 			out:  "first/middle/last",
 			modifiers: modifiers(
-				strmod.SplitAndReturnLast("?"),
+				strmod.SplitAndReturnLastPart("?"),
 			),
 		},
 		{
-			desc: "SplitAndReturnLast - last char for empty sep",
+			desc: "SplitAndReturnLastPart - last char for empty sep",
 			in:   "first/middle/last",
 			out:  "t",
 			modifiers: modifiers(
-				strmod.SplitAndReturnLast(""),
+				strmod.SplitAndReturnLastPart(""),
 			),
 		},
 		{
-			desc: "SplitAndReturnLast - empty output for in & sep empty",
+			desc: "SplitAndReturnLastPart - empty output for in & sep empty",
 			in:   "",
 			out:  "",
 			modifiers: modifiers(
-				strmod.SplitAndReturnLast(""),
+				strmod.SplitAndReturnLastPart(""),
 			),
 		},
 		{
-			desc: "SplitAndReturnFirst - return first",
+			desc: "SplitAndReturnFirstPart - return first",
 			in:   "first/middle/last",
 			out:  "first",
 			modifiers: modifiers(
-				strmod.SplitAndReturnFirst("/"),
+				strmod.SplitAndReturnFirstPart("/"),
 			),
 		},
 		{
-			desc: "SplitAndReturnFirst - unchanged for no matches",
+			desc: "SplitAndReturnFirstPart - unchanged for no matches",
 			in:   "first/middle/last",
 			out:  "first/middle/last",
 			modifiers: modifiers(
-				strmod.SplitAndReturnFirst("?"),
+				strmod.SplitAndReturnFirstPart("?"),
 			),
 		},
 		{
-			desc: "SplitAndReturnFirst - last char for empty sep",
+			desc: "SplitAndReturnFirstPart - last char for empty sep",
 			in:   "first/middle/last",
 			out:  "f",
 			modifiers: modifiers(
-				strmod.SplitAndReturnFirst(""),
+				strmod.SplitAndReturnFirstPart(""),
 			),
 		},
 		{
-			desc: "SplitAndReturnFirst - empty output for in & sep empty",
+			desc: "SplitAndReturnFirstPart - empty output for in & sep empty",
 			in:   "",
 			out:  "",
 			modifiers: modifiers(
-				strmod.SplitAndReturnFirst(""),
+				strmod.SplitAndReturnFirstPart(""),
 			),
 		},
 	}
