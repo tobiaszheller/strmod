@@ -54,13 +54,6 @@ func ToUpperSpecial(c unicode.SpecialCase) Modifier {
 	}
 }
 
-// ToValidUTF8 is executing stdlib strings.ToValidUTF8().
-func ToValidUTF8(replacement string) Modifier {
-	return func(s string) string {
-		return strings.ToValidUTF8(s, replacement)
-	}
-}
-
 // Trim is executing stdlib strings.Trim().
 func Trim(cutset string) Modifier {
 	return func(s string) string {
